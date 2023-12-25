@@ -13,16 +13,28 @@ setInterval(() => {
     mn.style.transform = `rotateZ(${mm}deg)`;
     sc.style.transform = `rotateZ(${ss}deg)`;
 
-    
+
     //  Digital Clock
     let hour = document.getElementById('hour');
     let minutes = document.getElementById('minutes');
     let seconds = document.getElementById('seconds');
     let ampm = document.getElementById('ampm');
+    let dt = document.getElementById('dt');
+    let mon = document.getElementById('mon');
+    let yr = document.getElementById('yr');
+    let days = document.getElementById('day');
 
     let h = new Date().getHours();
     let m = new Date().getMinutes();
     let s = new Date().getSeconds();
+    let dates = new Date().getDate();
+    let months = new Date().getMonth();
+    let years = new Date().getFullYear();
+
+
+    const daysOfWeek = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ]; 
+    const dy = daysOfWeek[new Date().getDay()];
+
 
     var am = h >= 12 ? 'PM' : 'AM';
 
@@ -40,4 +52,8 @@ setInterval(() => {
     minutes.innerHTML = m;
     seconds.innerHTML = s;
     ampm.innerHTML = am;
+    dt.innerHTML = dates;
+    mon.innerHTML = months;
+    yr.innerHTML = years; 
+    days.innerHTML = dy;
 })

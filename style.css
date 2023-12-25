@@ -17,8 +17,8 @@ body{
 
 .sample-clock{
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +33,7 @@ body{
 .sample-clock::before{
     content: "";
     position: absolute;
+    top: 127px;
     width: 4px;
     height: 4px;
     border-radius: 50%;
@@ -45,6 +46,7 @@ body{
 
 .sample-numbers{
     position: absolute;
+    top: 30px;
     width: 200px;
     height: 200px;
     background: #152b4a;
@@ -137,6 +139,49 @@ body{
 .sample-numbers .sample-circle#sampleMin i{
     width: 4px;
     transform: scaleY(0.75);
+}
+
+#date{
+    position: absolute;
+    bottom: 35px;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 1.6em;
+    font-weight: 600;
+    border-radius: 40px;
+    background: #152b4a;
+    box-shadow: 7px 7px 22px #152b4a66,
+    inset 7px 7px 7px rgba(255, 255, 255, 0.55),
+    -9px -9px 15px rgba(255, 255, 255, 1);
+}
+
+#date div{
+    position: relative;
+    width: 55px;
+    align-self: center;
+    color: var(--clr);
+    opacity: 0.95;
+}
+
+#days{
+    position: absolute;
+    bottom: 35px;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 2em;
+    font-weight: 600;
+    border-radius: 40px;
+    color: #04fc43;
+    background: #152b4a;
+    box-shadow: 7px 7px 22px #152b4a66,
+    inset 7px 7px 7px rgba(255, 255, 255, 0.55),
+    -9px -9px 15px rgba(255, 255, 255, 1);
+}
+
+#days div{
+    width: 70%;
+    text-align: center;
+    opacity: 0.95;
 }
 
 
