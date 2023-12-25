@@ -45,8 +45,8 @@ body{
 
 .sample-numbers{
     position: absolute;
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     background: #152b4a;
     border-radius: 50%;
     display: flex;
